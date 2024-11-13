@@ -1,1 +1,5 @@
-<p>contenedor works!</p>
+<div>
+    <app-btn-primario (cambiarColor)="cambiarColor()"></app-btn-primario>
+    <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario> <!-- Nuevo botón -->
+  </div>
+  <div [style.backgroundColor]="color" [style.width.px]="tamano" [style.height.px]="tamano"></div>
