@@ -1,5 +1,9 @@
 <div>
-    <app-btn-primario (cambiarColor)="cambiarColor()"></app-btn-primario>
-    <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario> <!-- Nuevo botón -->
-  </div>
-  <div [style.backgroundColor]="color" [style.width.px]="tamano" [style.height.px]="tamano"></div>
+  <app-password [(ngModel)]="password"></app-password>
+  <app-email [(ngModel)]="email"></app-email>
+  <app-text [(ngModel)]="text"></app-text>
+  
+  <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar> <!-- Usar el botón Aceptar -->
+  
+  <app-visualizador *ngIf="mostrarDatos" [password]="password" [email]="email" [text]="text"></app-visualizador>
+</div>

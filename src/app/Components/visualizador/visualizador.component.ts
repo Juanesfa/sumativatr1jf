@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-visualizador',
   standalone: true,
-  imports: [],
   templateUrl: './visualizador.component.html',
-  styleUrl: './visualizador.component.css'
+  styleUrls: ['./visualizador.component.css']
 })
 export class VisualizadorComponent {
-
+  @Input() password: string = '';
+  @Input() email: string = '';
+  @Input() text: string = '';
 }
