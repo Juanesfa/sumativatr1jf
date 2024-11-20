@@ -1,25 +1,25 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
 @Component({
   selector: 'app-email',
   standalone: true,
-  imports: [FormsModule], // Importar FormsModule para ngModel
+  imports: [FormsModule], // Agregar FormsModule aquí
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css']
 })
 export class EmailComponent {
   private _email: string = '';
-  
+
   @Input()
   set email(value: string) {
     this._email = value;
-    this.emailChange.emit(this._email); // Emitir el cambio
+    this.emailChange.emit(this._email);
   }
-  
+
   get email(): string {
     return this._email;
   }
 
-  @Output() emailChange = new EventEmitter<string>(); // Emitir cambios
+  @Output() emailChange = new EventEmitter<string>();
 }

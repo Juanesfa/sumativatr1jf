@@ -1,16 +1,18 @@
-<!-- src/app/Components/contenedor/contenedor.component.html -->
 <div>
   <app-email [(email)]="email"></app-email>
   <app-password [(password)]="password"></app-password>
   <app-text [(text)]="text"></app-text>
   
   <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
-  <app-btn-cancelar (click)="onCancelar()"></app-btn-cancelar>
+  <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
+  <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
 </div>
 
-<div *ngIf="mostrarDatos">
-  <h3>Datos Ingresados:</h3>
-  <p>Email: {{ email }}</p>
-  <p>Password: {{ password }}</p>
-  <p>Text: {{ text }}</p>
-</div>
+<!-- Visualizador para mostrar los datos -->
+<app-visualizador 
+  *ngIf="mostrarDatos" 
+  [email]="datosParaVisualizar.email" 
+  [password]="datosParaVisualizar.password" 
+  [text]="datosParaVisualizar.text"
+  [colorCuadrado]="colorCuadrado"> <!-- Asegúrate de que esta línea esté correcta -->
+</app-visualizador>

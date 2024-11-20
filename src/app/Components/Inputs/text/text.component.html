@@ -1,4 +1,4 @@
 <div>
-  <label for="text">Texto:</label>
-  <input type="text" id="text" [(ngModel)]="text" placeholder="Ingrese su texto" />
+  <label for="text">Text:</label>
+  <textarea id="text" [(ngModel)]="text" (ngModelChange)="textChange.emit(text)"></textarea>
 </div>

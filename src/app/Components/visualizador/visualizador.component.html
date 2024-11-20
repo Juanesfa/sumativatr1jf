@@ -1,6 +1,10 @@
 <div>
-  <h2>Datos Ingresados</h2>
-  <p><strong>Contraseña:</strong> {{ password }}</p>
-  <p><strong>Email:</strong> {{ email }}</p>
-  <p><strong>Texto:</strong> {{ text }}</p>
+  <h3>Datos Ingresados:</h3>
+  <p>Email: {{ email }}</p>
+  <p>Password: {{ password }}</p>
+  <p>Text: {{ text }}</p>
+
+  <!-- Cuadrado que cambia de color -->
+  <div 
+    [style.background-color]="colorCuadrado" style="width: 100px; height: 100px;"></div>
 </div>

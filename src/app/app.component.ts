@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms'; // Importar FormsModule
   imports: [
     RouterOutlet,
     ContenedorComponent,
-    FormsModule // Agregar FormsModule aquí
+    FormsModule // Agregar FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

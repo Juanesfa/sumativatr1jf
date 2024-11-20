@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-btn-aceptar',
-  standalone: true, // Hacer que el componente sea standalone
+  standalone: true,
   template: `
     <button (click)="onAceptar()">Aceptar</button>
   `,
