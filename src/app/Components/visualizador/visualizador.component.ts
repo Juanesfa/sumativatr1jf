@@ -16,15 +16,22 @@ export class VisualizadorComponent {
   @Input() color: string = 'green';
 
   size: number = 100; // Tamaño inicial en píxeles
+  incrementCount: number = 0; // Contador de incrementos
+  maxIncrements: number = 4; // Máximo de incrementos permitidos
+  incrementValue: number = 25; // Valor de incremento por cada clic
 
   cambiarTamano() {
-    // Generar un tamaño aleatorio entre 100 y 400 píxeles
-    const newSize = Math.floor(Math.random() * 301) + 100; // De 100 a 400
-    this.size = newSize;
+    if (this.incrementCount < this.maxIncrements) {
+      this.size += this.incrementValue; // Incrementar el tamaño
+      this.incrementCount++; // Aumentar el contador
+    }
 
-    // Restablecer el tamaño después de un breve período
-    setTimeout(() => {
-      this.size = 100; // Restablecer a 100 píxeles
-    }, 1000); // 1 segundo
+    // Restablecer el tamaño después de alcanzar el máximo
+    if (this.incrementCount === this.maxIncrements) {
+      setTimeout(() => {
+        this.size = 100; // Restablecer a 100 píxeles
+        this.incrementCount = 0; // Reiniciar el contador
+      }, 1000); // 1 segundo
+    }
   }
 }
