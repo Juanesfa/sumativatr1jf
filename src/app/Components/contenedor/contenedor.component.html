@@ -1,3 +1,4 @@
+<!-- contenedor.component.html -->
 <div>
   <app-email [(email)]="email"></app-email>
   <app-password [(password)]="password"></app-password>
@@ -5,12 +6,13 @@
   
   <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
   <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
+  
+  <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
+  
+  <app-visualizador 
+    [email]="datosParaVisualizar.email" 
+    [password]="datosParaVisualizar.password" 
+    [text]="datosParaVisualizar.text" 
+    [color]="color"> <!-- Aquí se pasa el color -->
+  </app-visualizador>
 </div>
-
-<!-- Visualizador para mostrar los datos -->
-<app-visualizador 
-  *ngIf="mostrarDatos" 
-  [email]="datosParaVisualizar.email" 
-  [password]="datosParaVisualizar.password" 
-  [text]="datosParaVisualizar.text"
-></app-visualizador>

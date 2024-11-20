@@ -7,7 +7,7 @@ import { PasswordComponent } from '../Inputs/password/password.component';
 import { TextComponent } from '../Inputs/text/text.component';
 import { VisualizadorComponent } from '../visualizador/visualizador.component';
 import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common'; // Importar CommonModule
 
 @Component({
   selector: 'app-contenedor',
@@ -21,7 +21,7 @@ import { NgIf } from '@angular/common';
     TextComponent,
     VisualizadorComponent,
     FormsModule,
-    NgIf
+    CommonModule // Agregar CommonModule aquí
   ],
   templateUrl: './contenedor.component.html',
   styleUrls: ['./contenedor.component.css']
@@ -37,6 +37,8 @@ export class ContenedorComponent {
     password: '',
     text: ''
   };
+
+  color: string = 'green'; // Color inicial
 
   onAceptar() {
     this.datosParaVisualizar = {
@@ -54,4 +56,7 @@ export class ContenedorComponent {
     this.mostrarDatos = false;
   }
 
+  cambiarColor(newColor: string) {
+    this.color = newColor; // Cambiar el color
+  }
 }
