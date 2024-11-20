@@ -1,10 +1,12 @@
+// src/app/Components/Botones/btn-secundario/btn-secundario.component.ts
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-btn-secundario',
   standalone: true,
-  imports: [],
-  templateUrl: './btn-secundario.component.html',
+  template: `
+    <button (click)="onClick()">Cambiar Tamaño</button>
+  `,
   styleUrls: ['./btn-secundario.component.css']
 })
 export class BtnSecundarioComponent {
