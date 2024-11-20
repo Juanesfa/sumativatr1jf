@@ -1,0 +1,14 @@
+.contenedor {
+    display: flex; /* Usar Flexbox para organizar los elementos */
+    justify-content: space-between; /* Espacio entre los contenedores */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .izquierda {
+    flex: 1; /* Ocupa el 50% del espacio disponible */
+    margin-right: 20px; /* Espacio entre la izquierda y la derecha */
+  }
+  
+  .derecha {
+    flex: 1; /* Ocupa el 50% del espacio disponible */
+  }

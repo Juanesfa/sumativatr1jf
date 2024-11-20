@@ -1,0 +1,15 @@
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #2196F3; /* Borde azul */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus {
+    border-color: #FFEB3B; /* Cambia el color del borde al enfocarse */
+    box-shadow: 0 0 5px rgba(255, 235, 59, 0.5); /* Sombra al enfocarse */
+    outline: none;
+  }

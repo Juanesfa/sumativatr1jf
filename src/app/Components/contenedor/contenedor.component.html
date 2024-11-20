@@ -1,19 +1,19 @@
-<!-- src/app/Components/contenedor/contenedor.component.html -->
-<div>
-  <app-email [(email)]="email"></app-email>
-  <app-password [(password)]="password"></app-password>
-  <app-text [(text)]="text"></app-text>
-  
-  <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
-  <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
-  
-  <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
-  <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario> <!-- Agregar aquí -->
-  
-  <app-visualizador 
-    [email]="datosParaVisualizar.email" 
-    [password]="datosParaVisualizar.password" 
-    [text]="datosParaVisualizar.text" 
-    [color]="color">
-  </app-visualizador>
+<div class="contenedor">
+  <div class="izquierda">
+    <app-email [(email)]="email"></app-email>
+    <app-password [(password)]="password"></app-password>
+    <app-text [(text)]="text"></app-text>
+    <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
+    <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
+    <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
+    <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario>
+  </div>
+  <div class="derecha">
+    <app-visualizador 
+      [email]="datosParaVisualizar.email" 
+      [password]="datosParaVisualizar.password" 
+      [text]="datosParaVisualizar.text" 
+      [color]="color">
+    </app-visualizador>
+  </div>
 </div>
