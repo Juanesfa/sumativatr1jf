@@ -31,7 +31,6 @@ export class ContenedorComponent {
   password: string = '';
   text: string = '';
   mostrarDatos: boolean = false;
-  colorCuadrado: string = '#FFFFFF'; // Color por defecto del cuadrado
 
   datosParaVisualizar = {
     email: '',
@@ -55,7 +54,4 @@ export class ContenedorComponent {
     this.mostrarDatos = false;
   }
 
-  cambiarColor(nuevoColor: string) {
-    this.colorCuadrado = nuevoColor; // Actualiza el color del cuadrado
-  }
 }

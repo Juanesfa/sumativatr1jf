@@ -5,7 +5,6 @@
   
   <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
   <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
-  <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
 </div>
 
 <!-- Visualizador para mostrar los datos -->
@@ -14,5 +13,4 @@
   [email]="datosParaVisualizar.email" 
   [password]="datosParaVisualizar.password" 
   [text]="datosParaVisualizar.text"
-  [colorCuadrado]="colorCuadrado"> <!-- Asegúrate de que esta línea esté correcta -->
-</app-visualizador>
+></app-visualizador>

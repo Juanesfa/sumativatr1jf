@@ -10,5 +10,4 @@ export class VisualizadorComponent {
   @Input() password: string = '';
   @Input() email: string = '';
   @Input() text: string = '';
-  @Input() colorCuadrado: string = '#5A7EE8'; // Asegúrate de que esta línea esté presente
 }
