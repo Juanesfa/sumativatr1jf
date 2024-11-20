@@ -1,0 +1,14 @@
+button {
+    background-color: green; /* Color verde */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde predeterminado */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+  }
+  
+  button:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  }

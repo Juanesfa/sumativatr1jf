@@ -12,3 +12,28 @@
   .derecha {
     flex: 1; /* Ocupa el 50% del espacio disponible */
   }
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Organiza los botones en columna */
+    align-items: center; /* Centra los botones horizontalmente */
+  }
+  
+  .top-buttons,
+  .bottom-buttons {
+    display: flex;
+    gap: 15px; /* Espaciado entre los botones (reducido) */
+    margin: 10px 0; /* Margen vertical entre grupos de botones (reducido) */
+  }
+  
+  button {
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px 40px; /* Aumentar espaciado interno para hacer los botones más grandes */
+    font-size: 20px; /* Aumentar tamaño de fuente */
+    border: none; /* Sin borde predeterminado */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+  }
+  
+  button:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  }

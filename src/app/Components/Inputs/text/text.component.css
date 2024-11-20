@@ -1,15 +1,14 @@
-textarea {
-    width: 90%; /* Ocupa el 100% del contenedor */
+input {
+    width: 95%; /* Cambiar a 95% del contenedor */
     padding: 10px; /* Espaciado interno */
     margin: 10px 0; /* Margen vertical */
     border: 2px solid #4CAF50; /* Borde verde */
     border-radius: 5px; /* Bordes redondeados */
     font-size: 16px; /* Tamaño de fuente */
     transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
-    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
   }
   
-  textarea:focus {
+  input:focus {
     border-color: #FF5722; /* Cambia el color del borde al enfocarse */
     box-shadow: 0 0 5px rgba(255, 87, 34, 0.5); /* Sombra al enfocarse */
     outline: none; /* Elimina el contorno predeterminado */

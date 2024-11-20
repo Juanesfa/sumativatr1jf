@@ -1,12 +1,19 @@
 <div class="contenedor">
   <div class="izquierda">
+        <div class="button-container">
+      <div class="top-buttons">
+        <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
+        <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
+      </div>
+      <div class="bottom-buttons">
+        <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
+        <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario>
+      </div>
+    </div>
     <app-email [(email)]="email"></app-email>
     <app-password [(password)]="password"></app-password>
     <app-text [(text)]="text"></app-text>
-    <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
-    <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
-    <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
-    <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario>
+
   </div>
   <div class="derecha">
     <app-visualizador 
