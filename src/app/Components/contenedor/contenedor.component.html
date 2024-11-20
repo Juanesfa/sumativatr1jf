@@ -1,9 +1,16 @@
+<!-- src/app/Components/contenedor/contenedor.component.html -->
 <div>
-  <app-password [(ngModel)]="password"></app-password>
-  <app-email [(ngModel)]="email"></app-email>
-  <app-text [(ngModel)]="text"></app-text>
+  <app-email [(email)]="email"></app-email>
+  <app-password [(password)]="password"></app-password>
+  <app-text [(text)]="text"></app-text>
   
-  <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar> <!-- Usar el botón Aceptar -->
-  
-  <app-visualizador *ngIf="mostrarDatos" [password]="password" [email]="email" [text]="text"></app-visualizador>
+  <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
+  <app-btn-cancelar (click)="onCancelar()"></app-btn-cancelar>
+</div>
+
+<div *ngIf="mostrarDatos">
+  <h3>Datos Ingresados:</h3>
+  <p>Email: {{ email }}</p>
+  <p>Password: {{ password }}</p>
+  <p>Text: {{ text }}</p>
 </div>
