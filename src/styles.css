@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  }
+  
+  .dark-mode {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
+  }
