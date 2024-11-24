@@ -1,8 +1,8 @@
 <!-- src/app/Components/visualizador/visualizador.component.html -->
-<div>
-    <p>Email: {{ email }}</p>
-    <p>Password: {{ password }}</p>
-    <p>Text: {{ text }}</p>
-  </div>
-  <div [style.width.px]="size" [style.height.px]="size" [style.backgroundColor]="color">
+ <p>Email: {{ email }}</p>
+  <p>Password: {{ password }}</p>
+  <p>Text: {{ text }}</p>
+<div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px'}" (click)="cambiarTamano()">
+  <!-- Mostrar el icono "✔" cuando showCheckmark sea verdadero -->
+  <span *ngIf="showCheckmark" style="font-size: 24px; color: green;">✔</span>
 </div>

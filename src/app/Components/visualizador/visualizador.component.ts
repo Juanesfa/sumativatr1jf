@@ -14,6 +14,9 @@ export class VisualizadorComponent {
   @Input() email: string = '';
   @Input() text: string = '';
   @Input() color: string = 'green';
+  
+  // Nueva propiedad para mostrar el icono
+  showCheckmark: boolean = false;
 
   size: number = 100; // Tamaño inicial en píxeles
   incrementCount: number = 0; // Contador de incrementos
@@ -33,5 +36,11 @@ export class VisualizadorComponent {
         this.incrementCount = 0; // Reiniciar el contador
       }, 1000); // 1 segundo
     }
+  }
+
+  // Nueva función para mostrar el icono y cambiar el color
+  mostrarCheckmark() {
+    this.showCheckmark = true; // Mostrar el icono
+    this.color = 'lightgreen'; // Cambiar el color a verde claro
   }
 }

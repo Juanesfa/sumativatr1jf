@@ -52,6 +52,10 @@ export class ContenedorComponent {
       text: this.text
     };
     this.mostrarDatos = true;
+     // Llamar a la función para mostrar el checkmark y cambiar el color
+    if (this.visualizador) {
+      this.visualizador.mostrarCheckmark();
+    }
   }
 
   onCancelar() {
