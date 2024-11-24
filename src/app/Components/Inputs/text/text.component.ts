@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Importar FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-text',
   standalone: true,
-  imports: [FormsModule], // Agregar FormsModule aquí
+  imports: [FormsModule],
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })

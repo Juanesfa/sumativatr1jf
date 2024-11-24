@@ -10,26 +10,25 @@ import { FormsModule } from '@angular/forms';
 })
 export class EmailComponent {
   private _email: string = '';
-  @Output() emailChange = new EventEmitter<string>();
-  @Output() errorOccurred = new EventEmitter<string>(); // Evento para errores
 
   @Input()
   set email(value: string) {
-    if (this.validateEmail(value)) {
-      this._email = value;
-      this.errorOccurred.emit(''); // Emitir vacío si no hay error
-      this.emailChange.emit(this._email);
-    } else {
-      this.errorOccurred.emit('El correo electrónico debe incluir "@" y tener un formato válido.'); // Emitir error
-    }
+    this._email = value;
+    this.emailChange.emit(this._email);
   }
 
   get email(): string {
     return this._email;
   }
 
-  private validateEmail(email: string): boolean {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex para validar el formato de correo
-    return emailPattern.test(email);
+  @Output() emailChange = new EventEmitter<string>();
+  @Output() errorOccurred = new EventEmitter<string>(); // Evento para manejar errores
+
+  validateEmail() {
+    if (!this._email.includes('@')) {
+      this.errorOccurred.emit('El email debe contener un @ y tener un formato válido');
+    } else {
+      this.errorOccurred.emit(''); // Emitir vacío si no hay error
+    }
   }
 }

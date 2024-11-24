@@ -1,4 +1,5 @@
 // src/app/Components/contenedor/contenedor.component.ts
+  import { Output, EventEmitter } from '@angular/core';
   import { Component, ViewChild } from '@angular/core';
   import { BtnAceptarComponent } from '../Botones/btn-aceptar/btn-aceptar.component';
   import { BtnCancelarComponent } from '../Botones/btn-cancelar/btn-cancelar.component';
@@ -32,13 +33,16 @@
     styleUrls: ['./contenedor.component.css']
   })
   export class ContenedorComponent {
+    @Output() emailChange = new EventEmitter<string>();
+    @Output() passwordChange = new EventEmitter<string>();
+    @Output() textChange = new EventEmitter<string>();
+    
     email: string = '';
     password: string = '';
     text: string = '';
     mostrarDatos: boolean = false;
-    emailErrorMessage: string = ''; // Variable para el mensaje de error de email
-    passwordErrorMessage: string = ''; // Variable para el mensaje de error de password
-
+    emailErrorMessage: string = ''; // Mensaje de error para el email
+  passwordErrorMessage: string = ''; // Mensaje de error para la contraseña
 
     datosParaVisualizar = {
       email: '',
@@ -72,10 +76,16 @@ onPasswordError(error: string) {
   }
   
   onCancelar() {
-    this.email = '';
-    this.password = '';
-    this.text = '';
-    this.mostrarDatos = false;
+      this.email = '';
+      this.password = '';
+      this.text = '';
+      this.mostrarDatos = false;
+    
+      // Restablecer los mensajes de error
+      this.emailErrorMessage = ''; // Asegúrate de que esta variable esté definida en tu componente
+      this.passwordErrorMessage = ''; // Asegúrate de que esta variable esté definida en tu componente
+    
+    
     this.visualizador.mostrarCheck = false; // Ocultar el checkmark
     this.cambiarColor('red');
     this.visualizador.mostrarXmark(); // Mostrar el X
