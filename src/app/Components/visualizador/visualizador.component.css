@@ -1,0 +1,9 @@
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em; /* Ajusta el tamaño del checkmark según sea necesario */
+    color: white; /* Color del checkmark */
+    pointer-events: none; /* Evitar que el checkmark interfiera con los clics */
+  }

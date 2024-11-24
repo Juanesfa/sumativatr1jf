@@ -52,26 +52,26 @@ export class ContenedorComponent {
       text: this.text
     };
     this.mostrarDatos = true;
-     // Llamar a la función para mostrar el checkmark y cambiar el color
-    if (this.visualizador) {
-      this.visualizador.mostrarCheckmark();
-    }
+    this.visualizador.mostrarCheckmark(); // Mostrar el checkmark
   }
-
+  
   onCancelar() {
     this.email = '';
     this.password = '';
     this.text = '';
     this.mostrarDatos = false;
+    this.visualizador.mostrarCheck = false; // Ocultar el checkmark
   }
-
+  
   cambiarTamano() {
     if (this.visualizador) {
       this.visualizador.cambiarTamano(); // Llamar al método cambiarTamano del VisualizadorComponent
+      this.visualizador.mostrarCheck = false; // Ocultar el checkmark
     }
   }
-
+  
   cambiarColor(newColor: string) {
     this.color = newColor; // Cambiar el color
+    this.visualizador.mostrarCheck = false; // Ocultar el checkmark
   }
 }

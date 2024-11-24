@@ -2,7 +2,8 @@
  <p>Email: {{ email }}</p>
   <p>Password: {{ password }}</p>
   <p>Text: {{ text }}</p>
-<div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px'}" (click)="cambiarTamano()">
-  <!-- Mostrar el icono "✔" cuando showCheckmark sea verdadero -->
-  <span *ngIf="showCheckmark" style="font-size: 24px; color: green;">✔</span>
-</div>
+  <div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px', 'position': 'relative'}">
+    <div *ngIf="mostrarCheck" class="checkmark" [@checkmarkAnimation]>
+      ✔
+    </div>
+  </div>
