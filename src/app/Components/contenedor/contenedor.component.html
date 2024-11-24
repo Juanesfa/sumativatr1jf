@@ -1,6 +1,6 @@
 <div class="contenedor">
   <div class="izquierda">
-        <div class="button-container">
+    <div class="button-container">
       <div class="top-buttons">
         <app-btn-aceptar (aceptar)="onAceptar()"></app-btn-aceptar>
         <app-btn-cancelar (cancelar)="onCancelar()"></app-btn-cancelar>
@@ -9,22 +9,32 @@
         <app-btn-primario (cambiarColor)="cambiarColor($event)"></app-btn-primario>
         <app-btn-secundario (cambiarTamano)="cambiarTamano()"></app-btn-secundario>
       </div>
-      <!-- src/app/Components/contenedor/contenedor.component.html -->
-<app-btn-modo-noche></app-btn-modo-noche> <!-- Agregar el botón aquí -->
-<!-- Resto de la plantilla -->
+      <app-btn-modo-noche></app-btn-modo-noche> <!-- Agregar el botón aquí -->
     </div>
-    <app-email [(email)]="email"></app-email>
-    <app-password [(password)]="password"></app-password>
-    <app-text [(text)]="text"></app-text>
 
+    <app-email 
+      (errorOccurred)="onEmailError($event)" 
+      [(email)]="email">
+    </app-email>
+    <!-- Mensaje de error para el Email -->
+    <div *ngIf="emailErrorMessage" class="error-message">{{ emailErrorMessage }}</div>
+
+    <app-password 
+      (errorOccurred)="onPasswordError($event)" 
+      [(password)]="password">
+    </app-password>
+    <!-- Mensaje de error para el Password -->
+    <div *ngIf="passwordErrorMessage" class="error-message">{{ passwordErrorMessage }}</div>
+
+    <app-text [(text)]="text"></app-text>
   </div>
+  
   <div class="derecha">
     <app-visualizador
-    [email]="datosParaVisualizar.email" 
-    [password]="datosParaVisualizar.password" 
-    [text]="datosParaVisualizar.text" 
-    [color]="color"
-    >
+      [email]="datosParaVisualizar.email" 
+      [password]="datosParaVisualizar.password" 
+      [text]="datosParaVisualizar.text" 
+      [color]="color">
     </app-visualizador>
   </div>
 </div>

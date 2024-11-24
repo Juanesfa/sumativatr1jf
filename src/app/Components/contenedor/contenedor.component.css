@@ -37,3 +37,11 @@
   button:hover {
     transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
   }
+
+  /* contenedor.component.css */
+.error-message {
+  color: red; /* Color rojo para el mensaje de error */
+  font-size: 16px; /* Tamaño de fuente más grande */
+  margin: 10px 0; /* Espaciado alrededor del mensaje */
+  font-weight: bold; /* Negrita para mayor énfasis */
+}
