@@ -31,6 +31,7 @@ export class VisualizadorComponent {
   maxIncrements: number = 4; // Máximo de incrementos permitidos
   incrementValue: number = 25; // Valor de incremento por cada clic
   mostrarCheck: boolean = false; // Controlar la visibilidad del checkmark
+  mostrarX: boolean = false; // Controlar la visibilidad del checkmark
 
   cambiarTamano() {
     if (this.incrementCount < this.maxIncrements) {
@@ -51,6 +52,13 @@ export class VisualizadorComponent {
     this.mostrarCheck = true; // Mostrar el checkmark
     setTimeout(() => {
       this.mostrarCheck = false; // Ocultar después de un tiempo
-    }, 1000); // Mantener visible por 1 segundo
+    }, 2000); // Mantener visible por 2 segundo
+  }
+
+  mostrarXmark() {
+    this.mostrarX = true; // Mostrar el checkmark
+    setTimeout(() => {
+      this.mostrarX = false; // Ocultar después de un tiempo
+    }, 2000); // Mantener visible por 2 segundo
   }
 }

@@ -52,6 +52,7 @@ export class ContenedorComponent {
       text: this.text
     };
     this.mostrarDatos = true;
+    this.visualizador.mostrarX = false; // Ocultar el X
     this.cambiarColor('green');
     this.visualizador.mostrarCheckmark(); // Mostrar el checkmark
     
@@ -63,17 +64,21 @@ export class ContenedorComponent {
     this.text = '';
     this.mostrarDatos = false;
     this.visualizador.mostrarCheck = false; // Ocultar el checkmark
+    this.cambiarColor('red');
+    this.visualizador.mostrarXmark(); // Mostrar el X
   }
   
   cambiarTamano() {
     if (this.visualizador) {
       this.visualizador.cambiarTamano(); // Llamar al método cambiarTamano del VisualizadorComponent
+      this.visualizador.mostrarX = false; // Ocultar el X
       this.visualizador.mostrarCheck = false; // Ocultar el checkmark
     }
   }
   
   cambiarColor(newColor: string) {
     this.color = newColor; // Cambiar el color
+    this.visualizador.mostrarX = false; // Ocultar el X
     this.visualizador.mostrarCheck = false; // Ocultar el checkmark
   }
 }
