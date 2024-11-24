@@ -28,7 +28,7 @@ export class PasswordComponent {
     if (this._password.length < 6) {
       this.errorOccurred.emit('La contraseña debe tener al menos 6 caracteres e incluir letras y números');
     } else {
-      this.errorOccurred.emit(''); // Emitir vacío si no hay error
+      this.errorOccurred.emit('¡Correcto!'); // Emitir vacío si no hay error
     }
   }
 }

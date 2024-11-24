@@ -26,9 +26,9 @@ export class EmailComponent {
 
   validateEmail() {
     if (!this._email.includes('@')) {
-      this.errorOccurred.emit('El email debe contener un @ y tener un formato válido');
+      this.errorOccurred.emit('El email debe contener un @');
     } else {
-      this.errorOccurred.emit(''); // Emitir vacío si no hay error
+      this.errorOccurred.emit('¡Correcto!'); // Emitir vacío si no hay error
     }
   }
 }
