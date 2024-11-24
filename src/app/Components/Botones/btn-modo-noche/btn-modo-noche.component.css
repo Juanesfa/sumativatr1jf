@@ -1,9 +1,14 @@
-.dark-mode {
-    background-color: #121212; /* Color de fondo oscuro */
-    color: #ffffff; /* Color de texto claro */
-  }
-  
-  .dark-mode button {
-    background-color: #333333; /* Color de fondo de botones en modo oscuro */
-    color: #ffffff; /* Color de texto de botones en modo oscuro */
-  }
+button {
+  background-color: #505050; /* Color verde */
+  color: white; /* Color del texto */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border: none; /* Sin borde predeterminado */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+button:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}

@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./btn-modo-noche.component.css']
 })
 export class BtnModoNocheComponent {
-  isDarkMode: boolean = false; // Estado del modo oscuro
-
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
-    document.body.classList.toggle('dark-mode', this.isDarkMode);
+  // Método para cambiar el fondo a negro
+  cambiarFondo() {
+    document.body.style.backgroundColor = 'black'; // Cambiar el color de fondo
+    document.body.style.color = 'white'; // Cambiar el color del texto a blanco para mayor contraste
   }
 }
