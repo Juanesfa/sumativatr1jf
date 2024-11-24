@@ -52,7 +52,9 @@ export class ContenedorComponent {
       text: this.text
     };
     this.mostrarDatos = true;
+    this.cambiarColor('green');
     this.visualizador.mostrarCheckmark(); // Mostrar el checkmark
+    
   }
   
   onCancelar() {
