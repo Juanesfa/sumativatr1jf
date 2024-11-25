@@ -1,8 +1,10 @@
 <!-- src/app/Components/visualizador/visualizador.component.html -->
- <p>Email: {{ email }}</p>
+<div class="visualizador">
+  <p>Email: {{ email }}</p>
   <p>Password: {{ password }}</p>
   <p>Text: {{ text }}</p>
-  <div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px', 'position': 'relative'}">
+  
+  <div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px', 'position': 'relative', 'border-radius': '10px', 'border': '2px solid #4CAF50'}">
     <div *ngIf="mostrarCheck" class="checkmark" [@checkmarkAnimation]>
       ✔
     </div>
@@ -10,3 +12,4 @@
       ❌
     </div>
   </div>
+</div>

@@ -17,3 +17,46 @@
   color: white; /* Color del checkmark */
   pointer-events: none; /* Evitar que el checkmark interfiera con los clics */
 }
+
+/* visualizador.component.css */
+/* Estilo general del visualizador */
+.visualizador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Espaciado interno */
+  border: 2px solid #4CAF50; /* Borde verde */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #f9f9f9; /* Fondo claro */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse */
+.visualizador:hover {
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+/* Estilo para el texto */
+.visualizador p {
+  margin: 10px 0; /* Espaciado entre párrafos */
+  font-size: 18px; /* Tamaño de fuente */
+  color: #333; /* Color de texto */
+}
+
+/* Estilo para el contenedor de la marca de verificación y X */
+.visualizador div[ngStyle] {
+  display: flex; /* Alinear elementos en el centro */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  border-radius: 10px; /* Bordes redondeados */
+  position: relative; /* Posicionamiento relativo para los elementos internos */
+}
+
+/* Estilo para las marcas de verificación y X */
+.checkmark, .Xmark {
+  font-size: 50px; /* Tamaño de la marca */
+  position: absolute; /* Posicionamiento absoluto */
+  transition: opacity 0.3s; /* Transición suave para la opacidad */
+}
