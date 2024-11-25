@@ -1,10 +1,10 @@
 <!-- src/app/Components/visualizador/visualizador.component.html -->
-<div class="visualizador">
+<div class="visualizador" style="text-align: left;"> <!-- Alinear texto a la izquierda -->
   <p>Email: {{ email }}</p>
   <p>Password: {{ password }}</p>
   <p>Text: {{ text }}</p>
   
-  <div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px', 'position': 'relative', 'border-radius': '10px', 'border': '2px solid #4CAF50'}">
+  <div [ngStyle]="{'background-color': color, 'width': size + 'px', 'height': size + 'px', 'position': 'relative', 'border-radius': '10px', 'border': '2px solid #4CAF50', 'margin-top': '10px'}">
     <div *ngIf="mostrarCheck" class="checkmark" [@checkmarkAnimation]>
       ✔
     </div>

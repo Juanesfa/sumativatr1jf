@@ -1,29 +1,9 @@
-.checkmark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5em; /* Ajusta el tamaño del checkmark según sea necesario */
-  color: white; /* Color del checkmark */
-  pointer-events: none; /* Evitar que el checkmark interfiera con los clics */
-}
-
-.Xmark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5em; /* Ajusta el tamaño del checkmark según sea necesario */
-  color: white; /* Color del checkmark */
-  pointer-events: none; /* Evitar que el checkmark interfiera con los clics */
-}
-
 /* visualizador.component.css */
 /* Estilo general del visualizador */
 .visualizador {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Alinear texto a la izquierda */
   justify-content: center;
   padding: 20px; /* Espaciado interno */
   border: 2px solid #4CAF50; /* Borde verde */
@@ -52,11 +32,29 @@
   justify-content: center; /* Centrar horizontalmente */
   border-radius: 10px; /* Bordes redondeados */
   position: relative; /* Posicionamiento relativo para los elementos internos */
+  margin-top: 10px; /* Espacio entre el texto y el contenedor */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
 }
 
 /* Estilo para las marcas de verificación y X */
 .checkmark, .Xmark {
-  font-size: 50px; /* Tamaño de la marca */
+  font-size: 5em; /* Tamaño de la marca */
+  color: white; /* Color del checkmark */
+  pointer-events: none; /* Evitar que el checkmark interfiera con los clics */
   position: absolute; /* Posicionamiento absoluto */
   transition: opacity 0.3s; /* Transición suave para la opacidad */
+}
+
+/* Posicionamiento de las marcas de verificación y X */
+.checkmark {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Xmark {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

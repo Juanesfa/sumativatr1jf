@@ -7,10 +7,12 @@
   .izquierda {
     flex: 1; /* Ocupa el 50% del espacio disponible */
     margin-right: 20px; /* Espacio entre la izquierda y la derecha */
+    width: 48%;
   }
   
   .derecha {
     flex: 1; /* Ocupa el 50% del espacio disponible */
+    width: 48%;
   }
   .button-container {
     display: flex;
