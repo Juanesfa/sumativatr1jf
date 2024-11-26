@@ -23,6 +23,6 @@ export class BtnModoNocheComponent {
   }
 
   get icon() {
-    return this.isNightMode ? '☀' : '🌙'; // Cambiar el ícono según el estado
+    return this.isNightMode ? '🌞' : '🌙'; // Cambiar el ícono según el estado
   }
 }

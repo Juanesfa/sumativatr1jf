@@ -5,7 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-btn-secundario',
   standalone: true,
   template: `
-    <button (click)="onClick()">Cambiar Tamaño</button>
+    <button (click)="onClick()">Secundario</button>
   `,
   styleUrls: ['./btn-secundario.component.css']
 })

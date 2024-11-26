@@ -4,7 +4,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-btn-primario',
   standalone: true,
   template: `
-    <button (click)="onClick()">Cambiar Color</button>
+    <button (click)="onClick()">Primario</button>
   `,
   styleUrls: ['./btn-primario.component.css']
 })
