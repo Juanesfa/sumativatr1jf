@@ -30,7 +30,7 @@ export class EmailComponent {
     if (!isValid) {
       this.errorOccurred.emit('Email inválido. Debe contener "@" y terminar en ".com".');
     } else {
-      this.errorOccurred.emit(''); // Emitir vacío si es válido
+      this.errorOccurred.emit('Correcto!'); // Emitir vacío si es válido
     }
   }
 }
