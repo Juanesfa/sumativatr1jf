@@ -15,6 +15,7 @@ export class EmailComponent {
   set email(value: string) {
     this._email = value;
     this.emailChange.emit(this._email);
+    this.validateEmail(this._email); // Validar cada vez que se establece el email
   }
 
   get email(): string {
@@ -22,13 +23,14 @@ export class EmailComponent {
   }
 
   @Output() emailChange = new EventEmitter<string>();
-  @Output() errorOccurred = new EventEmitter<string>(); // Evento para manejar errores
+  @Output() errorOccurred = new EventEmitter<string>(); // Emitir error como string
 
-  validateEmail() {
-    if (!this._email.includes('@')) {
-      this.errorOccurred.emit('El email debe contener un @');
+  validateEmail(email: string) {
+    const isValid = email.includes('@') && email.endsWith('.com');
+    if (!isValid) {
+      this.errorOccurred.emit('Email inválido. Debe contener "@" y terminar en ".com".');
     } else {
-      this.errorOccurred.emit('¡Correcto!'); // Emitir vacío si no hay error
+      this.errorOccurred.emit(''); // Emitir vacío si es válido
     }
   }
 }

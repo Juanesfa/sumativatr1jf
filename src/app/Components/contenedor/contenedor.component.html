@@ -13,16 +13,16 @@
     </div>
 
     <app-email 
-      (errorOccurred)="onEmailError($event)" 
+      (errorOccurred)="handleEmailError($event)" 
       [(email)]="email">
     </app-email>
-    <div *ngIf="emailErrorMessage" class="error-message">{{ emailErrorMessage }}</div>
+    <div *ngIf="emailError" class="error-message">{{ emailError }}</div> <!-- Mostrar error de email -->
 
     <app-password 
-      (errorOccurred)="onPasswordError($event)" 
+      (errorOccurred)="handlePasswordError($event)" 
       [(password)]="password">
     </app-password>
-    <div *ngIf="passwordErrorMessage" class="error-message">{{ passwordErrorMessage }}</div>
+    <div *ngIf="passwordError" class="error-message">{{ passwordError }}</div> <!-- Mostrar error de contraseña -->
 
     <app-text 
       [(text)]="text">
